@@ -1,0 +1,22 @@
+form > .form-group {
+  display: flex;
+  padding: 1rem 0;
+}
+
+#ratesInput {
+  flex-basis: 100%;
+  padding: 0.625rem 0.8rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #1b1b1b;
+}
+
+#ratesInput:focus {
+  border: 2px solid #1b1b1b;
+}
+
+@media only screen and (min-width: 600px) {
+  #ratesInput {
+    flex-basis: 46.5%;
+  }
+}
