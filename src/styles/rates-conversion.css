@@ -31,9 +31,10 @@
   transition: all 0.3s ease-out;
 }
 
-.rates-conversion p {
+.rates-conversion > div:last-child {
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 1rem;
 }

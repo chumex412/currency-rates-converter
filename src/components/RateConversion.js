@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "./Loader";
 import "../styles/rates-conversion.css";
 
 function RatesConversion ({ 
@@ -35,7 +36,7 @@ function RatesConversion ({
     setConvertTo(convertFrom)
   } 
 
-  const convertedRate = (loading || !price) ? <span>loading..</span> : (
+  const convertedRate = (loading || !price) ? <Loader /> : (
     parseInt(price.toFixed(2)) === 0 ? (
       <span>{(price?.toFixed(8))}&nbsp;</span>
     ) : (
@@ -84,11 +85,11 @@ function RatesConversion ({
           </select>
         </div>
       </div>
-      <p>
-        <span>{amount}{" "}{convertFrom.name}</span>&nbsp;{" "}
+      <div>
+        <p>{amount}{" "}{convertFrom.name}</p>&nbsp;{" "}
         <span>&nbsp;=&nbsp;</span>{" "}
-        <span>{convertedRate}&nbsp;{" "}{convertTo.name}</span>
-      </p>
+        <p>{convertedRate}&nbsp;{" "}{convertTo.name}</p>
+      </div>
     </section>
   )
 }
