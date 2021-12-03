@@ -85,11 +85,9 @@ function RatesConversion ({
         </div>
       </div>
       <p>
-        <span>{amount}</span>&nbsp;{" "}
-        <span>{convertFrom.name}</span>&nbsp;{" "}
-        <span>=</span>&nbsp;{" "}
-        <span>{convertedRate}</span>&nbsp;{" "}
-        <span>{convertTo.name}</span>
+        <span>{amount}{" "}{convertFrom.name}</span>&nbsp;{" "}
+        <span>&nbsp;=&nbsp;</span>{" "}
+        <span>{convertedRate}&nbsp;{" "}{convertTo.name}</span>
       </p>
     </section>
   )
